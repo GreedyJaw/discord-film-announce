@@ -1,0 +1,19 @@
+{
+  "app.command.name": "film",
+  "app.command.description": "Test Description",
+  "app.command.input.name": "name",
+  "app.command.input.description": "Название фильма",
+  "app.announce.description": "Описание",
+  "app.announce.genres": "Жанры",
+  "app.announce.duration": "Продолжительность",
+  "app.announce.more": "Подробно на кинопоиске",
+  "app.announce.more.link": "Кинопоиск",
+  "app.announce.view": "Канал для просмотра",
+  "app.announce.creator": "Транслирует",
+  "app.announce.started": "Трансляция началась!",
+  "app.announce.success": "Успех!",
+  "app.announce.join": "Присоединиться",
+  "app.error.not_found": "Фильм не найден",
+  "app.select.film": "Выберите фильм",
+  "app.select.place": "Выберите кинозал"
+}

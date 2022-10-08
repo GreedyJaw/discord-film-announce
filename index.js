@@ -30,7 +30,7 @@ client
     );
     
     client.filmChannels = channels
-      .filter(({ name }) => name.match(/Кинозал №\d/))
+      .filter(item => item && item.name.match(/Кинозал №\d/))
       .sort((ch1, ch2) => ch1.rawPosition - ch2.rawPosition);
     
     client.announceChannel = await client.channels.fetch(process.env.ANNOUNCE_CHANNEL_ID);

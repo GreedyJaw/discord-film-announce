@@ -49,18 +49,22 @@ const createPreview = (film, user, channel) => {
   }
 
   if (film?.genres.length > 0) {
-    content += `**${t['app.announce.genres']}** *: ${film.genres.map(({ genre }) => genre).join(', ')}*\n\n`;
+    content += `**${t['app.announce.genres']}** *: ${film.genres.map(({ genre }) => genre).join(', ')}*\n`;
   }
 
   if (film.filmLength) {
     const duration = getDurationByMinutes(film.filmLength);
 
-    content += `**${t['app.announce.duration']}** *: ${film.filmLength} мин. / ${duration}*\n\n`;
+    content += `**${t['app.announce.duration']}** *: ${film.filmLength} мин. / ${duration}*\n`;
   }
 
-  content += `**${t['app.announce.more']}** : [*${t['app.announce.more.link']}*](${film.webUrl})\n\n`;
+  content += `**${t['app.announce.more']}** : [*${t['app.announce.more.link']}*](${film.webUrl})\n`;
 
-  content += `**${t['app.announce.view']}** : [*${channel.name}*](${channelLink})\n\n`;
+  content += `**${t[`app.announce.ratingKinopoisk`]}:** *${film.ratingKinopoisk} / 10*\n`
+
+  content += `**${t[`app.announce.ratingImdb`]}:** *${film.ratingImdb} / 10*\n\n`
+
+  content += `**${t['app.announce.view']}** : [*${channel.name}*](${channelLink})\n`;
 
   content += `**${t['app.announce.creator']}** : *<@${user.id}>*\n\n`;
 
